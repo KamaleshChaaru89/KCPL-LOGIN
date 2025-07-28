@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <h1>Welcome Admin!</h1>
+  <p>This is the Admin dashboard.</p>
+  <div id="root"></div>
+  <script>
+    const root = document.getElementById('root');
+
+    // Project Overview Section
+    const overviewSection = document.createElement('section');
+    const overviewHeading = document.createElement('h2');
+    overviewHeading.textContent = 'Project Overview';
+    const overviewPara = document.createElement('p');
+    overviewPara.textContent = 'This project is an Email Login App with an Admin Dashboard. The application allows users to log in using their email credentials and provides an admin interface for managing users and viewing dashboard information.';
+    overviewSection.appendChild(overviewHeading);
+    overviewSection.appendChild(overviewPara);
+
+    // Features Implemented Section
+    const featuresSection = document.createElement('section');
+    const featuresHeading = document.createElement('h2');
+    featuresHeading.textContent = 'Features Implemented';
+    const featuresList = document.createElement('ul');
+    const features = [
+      'User authentication via email login',
+      'Admin dashboard for monitoring and management',
+      'Secure session handling',
+      'Responsive and user-friendly interface'
+    ];
+    features.forEach(feature => {
+      const li = document.createElement('li');
+      li.textContent = feature;
+      featuresList.appendChild(li);
+    });
+    featuresSection.appendChild(featuresHeading);
+    featuresSection.appendChild(featuresList);
+
+    // Append sections to root
+    root.appendChild(overviewSection);
+    root.appendChild(featuresSection);
+  </script>
+</body>
+</html>
